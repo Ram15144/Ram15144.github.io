@@ -307,6 +307,8 @@ h1
 .svgPanel
 {
 	border: 2px solid red;
+	display: block; 
+	margin:auto;
 	margin: 20px;
 	width: 80%;
 	height: 80%;
@@ -402,44 +404,6 @@ h1
   to   { transform-origin: 60% 70%; }
 }
 
-@keyframes righttoleft {
-	from { 
-		transform-origin: 80% 80%;
-	}
-	to {
-		transform-origin: 0% 20%;
-	}
-}
-@keyframes mymove {
-    from {top: 0px;}
-    to {top: 200px;}
-}
-
-
-
-@keyframes right {
-	from {transform: translateY(0);	}
-	to {transform: translateY(100%);}
-}
-@keyframes up {
-	from {transform: translateY(0);	}
-	to {transform: translateY(100%);}
-}
-@keyframes slidein {
-  from {
-    margin-left: 90%;
-    width: 150%; 
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-
-
-
 @keyframes revolve {
 	from {transform: rotate(0deg)
 		           translate(150px)
@@ -449,7 +413,7 @@ h1
 		           rotate(-360deg);}
 }
 @keyframes rotate {
-	  100% {transform: rotate(360deg);}
+	  100% {transform: rotate(45,50%,50%) ;}
 }
 @keyframes straightLine {
   50% {
@@ -468,8 +432,16 @@ h1
 	transition: all 0.8s ease-in-out;
 	animation: revolve 7s linear infinite;
 }
+#square1{
+	transition: all 2s;
+}
+#square1:hover{
+	/*animation: rotate 2s linear infinite;*/
+	animation: rotate 1s linear infinite;
+}
 #square {
-	transform: rotate(45deg);
+	transition: 0.5s;
+	transform: rotate(80deg);
 	/*transform-origin: 315px 85px;*/
 	animation: straightLine 5s infinite linear;
 }
