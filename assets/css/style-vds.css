@@ -321,12 +321,22 @@ h1
   {
   	width:60%;
   }
+  .aircraftGif
+  {
+  	width: 95%;
+  	margin-left: 2.5%;
+  }
 }
 @media only screen and (min-width : 321px) and (max-width: 768px)
 {
   .ram_img
   {
   	width:40%;
+  }
+  .aircraftGif
+  {
+  	width: 95%;
+  	margin-left: 2.5%;
   }
 }
 @media only screen and (min-width : 769px) and (max-width: 992px)
@@ -335,6 +345,11 @@ h1
   {
   	width:35%;
   }
+  .aircraftGif
+  {
+  	width: 90%;
+  	margin-left: 5%;
+  }
 }
 @media only screen and (min-width : 993px) and (max-width: 1200px)
 {
@@ -342,12 +357,22 @@ h1
   {
   	width:22%;
   }
+  .aircraftGif
+  {
+  	width: 80%;
+  	margin-left: 10%;
+  }
 }
 @media only screen and (min-width : 1201px)
 {
   .ram_img
   {
   	width:20%;
+  }
+  .aircraftGif
+  {
+  	width: 70%;
+  	margin-left: 15%;
   }
 }
 
@@ -361,11 +386,12 @@ h1
   color: #FFFFFF;
   text-align: center;
   font-size: 16px;
-  padding: 20px;
-  width: 200px;
+  padding: 5px;
+  width: 150px;
   transition: all 0.5s;
   cursor: pointer;
-  margin:0px 20px 20px 0px;
+  margin:5px 5px 5px 0px;
+  float: right;
 }
 
 .homePageButton span {
@@ -393,16 +419,13 @@ h1
 	background-color: red;
   	opacity: 0.8;
 }
-
-.homePageButton:hover span:after {
-  opacity: 1;
-  right: 0;
+.fa-linkedin-in, .fa-facebook, .fa-google-plus-g{
+	font-size: 20px; 
+	color:white;
+	margin: 0px 10px 0px 10px;
+	transition: all 0.1s;
 }
 
-@keyframes movea {
-	from { transform-origin: 10% 20%;}
-  to   { transform-origin: 60% 70%; }
-}
 
 @keyframes revolve {
 	from {transform: rotate(0deg)
@@ -420,10 +443,16 @@ h1
     transform: translate3D(100px, -5px, 0);
   }
 }
+@keyframes expand
+{
 
-.dot {
-  animation: straightLine 2.5s infinite linear;
 }
+
+.fa-linkedin-in:hover, .fa-facebook:hover, .fa-google-plus-g:hover{
+	transform: scale(1.2);
+	color: red;
+}
+
 #circle {
 	position: absolute;
 	margin-left: 50%;

@@ -7,8 +7,7 @@
     $(".visualization").hide();
     $(".svgGraphics").hide();
     $(".credits").hide();
-
-
+    
     $('a.aboutMe').on('click', function() {
       $(".row").hide();
       $(".visualization").hide();
