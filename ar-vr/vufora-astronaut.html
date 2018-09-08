@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unity and Vufora - AR Astronaut</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="../assets/css/style-ar-vr.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">CS-491</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="dropdown nav-item">
+				        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Assignments
+				        <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="ar-vr/pros-cons.html" class="nav-link">Pros/Cons of AR/VR</a></li>
+				          <li><a href="ar-vr/vufora-astronaut.html" class="nav-link">Vufora Astronaut</a></li>
+				        </ul>
+				    </li>
+					<li class="dropdown nav-item">
+				        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Projects
+				        <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="#" class="nav-link">Nothing yet</a></li>
+				        </ul>
+				    </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<figure>
+		<div class="fixed-wrap">
+		<img class="image-top1" src="../assets/img/ar-vr/procon1.jpg" class="responsive"> 
+			<div class="carousel-caption">
+				<h2 class="display-4 carousel-caption" style="font-size: 25pt; text-align: left; float: left;">Using Unity and Vufora to create AR Astronaut</h2>
+			</div>
+		</div>
+	</figure>
+	<div class="container-fluid">
+		<div class="row jumbotron">
+			<div class="col-12">
+				<h3 class="crousel-caption" style="text-align: center; padding-bottom: 1em; border-bottom: 1px solid #000;"> Developing Augmented Reality application using <b>Unity and Vufora<b></h3>
+				<p class="lead"> Augmented Reality is just incredible. Today's technology is improving at an exponential rate that even common people like us are able to build and use AR applications. A 2D image on the screen appearing as a 3D model in your hand, although in theory is nothing great in this day and age, does leave you astounded when you experience it for yourself and makes you wonder of what are the possibilities that can come from this.</p>
+			</div>
+			<img style="width: 40%; height: auto; float:center;" src="../assets/img/ar-vr/arvr-astronaut.jpg"/>
+			<div class="row">
+				<div class="col-12">
+					<h2 class="heading" style="text-align: left; border-bottom: 1px solid #b4b4b4; ">Developing the Application</h2>
+					<p class="lead" style="font-size:15pt;">
+						The entire software of Unity was easy to install and use. The models, textures and animations can be easily created and added to the screen via a mere drag and drop. On top of this Vufora developers have done an amazing job developing the software. It is so seamlessly integrated into Unity. It allows for detecting an image, cuboid, cylinder or a 3D object which is pretty much anything in our perceived surroundings. Computer Vision has jumped leaps and bounds that an immediate configuration of a model using pictures of it can immediately be imported to Unity and used to classify objects in the real world. It has sample scenes that can be used to test and understand how the software works. Initially you need to add a license that Vufora provides and then you can proceed with adding images to the database that can be used to classify later (There was a little problem with the software for detecting PNG files but JPG works just fine). It also gives you the rating of the picture you posted which indicates the probability that the image can be identified correctly in the real world. 
+					</p>
+					<p class="lead" style="font-size:15pt;">
+						After the database is set up you can import it to Unity. An image target needs to be selected, the database should be linked and the model to be displayed upon discovery needs to be added as a child to the image target. That's it! Congratulations on developing your first real Augmented Reality application. It was a moment of joy.
+					</p>
+				</div>
+				
+				<div class="row">
+				<div class="col-12">
+					<h2 class="heading" style="text-align: left; border-bottom: 1px solid #b4b4b4; ">Building the Scene</h2>
+					<p class="lead" style="font-size:15pt;">
+						Then I started wondering if anything more can be done. Sure I added animations. How would I make the scene more authentic? Some space rocks, a drone, the habitat. But still the scene seemed too static. So I went ahead and threw in a real video. All this in a matter of minutes! Ofcourse I wouldn't have been able to do it if the precompiled models and animations were not present(thank you once again vufora). I was surprised to see that the there was very minimal jitter and the models stayed exactly where they had to. It's very impressive.
+					</p>
+					<p class="lead" style="font-size:15pt;">
+						This technology can be used extensively in educational field to make education interactive and fun just using a phone. But when the phone focuses off the scene it takes a while to get the models to load when the image is broght back to the focus of the camera again. This is one drawback as the image or the object the software needs to detect should always be in the scene. It would be useful to gain knowledge on the object but it wouldn't be much use if we dont have the image. 
+					</p>
+					<p class="lead" style="font-size:15pt;">					
+						But using this software is an amazing start for beginners to get their foot into the Augmented Reality world.  
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
