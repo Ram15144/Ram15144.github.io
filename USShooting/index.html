@@ -41,17 +41,17 @@
 	</style>
 
 	<style>
-		#map { width: 700px; height: 500px; }
+		#map { width: 100%; height: 500px; }
 		.info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } 
 		.info h4 { margin: 0 0 5px; color: #777; }
 		.legend { text-align: left; line-height: 18px; color: #555; } 
-		.legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+		.legend i { width: 55px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
 
 	</style>
 </head>
-<body style="background-color: grey;">
+<body style="background-color: #EEEEEE;">
 <div class="col-12" style="text-align: center; font-family: 'Libre Baskerville', serif;">
-	<h1><b>US Gun Deaths Visualization</b></h1>
+	<h1><b>US <span style="color: red;">Gun Deaths</span> Visualization</b></h1>
 </div>
 <div class="row">
 	<div class="col-8">
@@ -61,29 +61,79 @@
 		</div>
 	</div>
 	<div class="col-4">
-		<div id="graphic" style="float: right;">
-
+		<div class="row" style="margin-left: 80px; font-family: 'Libre Baskerville', sans-serif; font-size: 35px;">
+			States with more than <span style="color: red;"><i><u>200 Deaths</u></i></span>
+		</div>
+		<div class="row">
+			<div id="graphic" style="float: right;">
+					
+			</div>
 		</div>
 	</div>
 </div>
-
-
+<div class="row" style="margin-left: 80px; font-family: 'Libre Baskerville', sans-serif; font-size: 40px;">
+	<div class="col-1">
+		<div class="row">
+			<img src="assets/icon/refresh.png" id="refresh" style=" margin: 10px; width: 40px; height: 40px; cursor: pointer;" />
+		</div>
+	</div>
+	<div class="col-11">
+		<div class="row">
+				Gun Deaths: <span id="city"></span> USA 
+		</div>
+		<div class="row" style="font-family: 'Libre Baskerville', sans-serif; font-size: 15px;">
+			(Dec 2012 - Dec 2013)
+		</div>
+		<div class="row" style="margin-top: 16px; margin-bottom: 16px; font-family: 'Libre Baskerville', sans-serif; font-size: 25px;">
+			Total Deaths: <span id="tot_deaths">12070 people</span>
+		</div>
+		<div class="row" style="margin-bottom:8px; font-family: 'Libre Baskerville', sans-serif; font-size: 25px;">
+			<span style="color: #DE0989;">Female</span> Deaths : <span id="female_deaths">1850</span><span id="ageFCategories"></span>
+		</div>
+		<div class="row" style="font-family: 'Libre Baskerville', sans-serif; font-size: 25px;">
+			<span style="color: #1409DE;">Male</span> Deaths: <span id="male_deaths">10153</span><span id="ageMCategories"></span>
+		</div>
+	</div>
+</div>
 <script type="text/javascript" src="assets/data/us_state_deaths.json"></script>
 
 <script type="text/javascript">
-function drawBarGraph()
+
+let store;
+let dict = {}; // Stores the state name and their layer info
+let ageMChildern =0, ageMYouth=0, ageMAdults=0, ageMSeniors=0, ageMUnknown=0;
+let ageFChildern=0, ageFYouth=0, ageFAdults=0, ageFSeniors=0, ageFUnknown=0;
+let tot_deaths = 12070;
+let fem_deaths = 1850;
+let mal_deaths = 10153;
+
+queue()
+	.defer(d3.csv, 'assets/data/StateGunDeathsModified.csv')
+	.defer(d3.json, 'assets/data/(OUTPUT) state_deaths_loc.json')
+	.await(load_data_func);
+
+
+
+function load_data_func(error, states_xls, state_deaths)
 {
-	let data = [];
-	for(let i=0; i<states.features.length;i++)
+	let StateGunDeaths = states_xls;
+	let StateGunDeathsLoc = state_deaths;
+	//console.log(StateGunDeathsLoc);
+
+	//Draw Horizontal Bar Graph 
+	function drawBarGraph()
 	{
-		if(states.features[i].properties.deaths > 200)
+		let data = [];
+		for(let i=0; i<states.features.length;i++)
 		{
-			let list = {};
-			list["name"] =  states.features[i].properties.NAME;
-			list["value"] = states.features[i].properties.deaths;
-			data.push(list);
+			if(states.features[i].properties.deaths > 200)
+			{
+				let list = {};
+				list["name"] =  states.features[i].properties.NAME;
+				list["value"] = states.features[i].properties.deaths;
+				data.push(list);
+			}
 		}
-	}
 
 
 	    //sort bars based on value
@@ -92,17 +142,19 @@ function drawBarGraph()
 	    })
 
       	//data.splice(20,states.features.length);
-	
+		
+	    
 	    //set up svg using margin conventions - we'll need plenty of room on the left for labels
 	    var margin = {
 	        top: 0,
 	        right: 45,
-	        bottom: 0,
-	        left: 110
+	        bottom: 10,
+	        left: 200
 	    };
 
 	    var width = 480 - margin.left - margin.right,
-	        height = 500 - margin.top - margin.bottom;
+	        height = 400 - margin.top - margin.bottom;
+
 
 	    var svg = d3.select("#graphic").append("svg")
 	        .attr("width", width + margin.left + margin.right)
@@ -149,6 +201,16 @@ function drawBarGraph()
 	        .attr("x", 0)
 	        .attr("width", function (d) {
 	            return x(d.value);
+	        })
+	        .on("mouseover",function(d){
+	        	//console.log(d.name);
+	        	highlightFeatureBarGraph(dict[d.name]);
+	        	d3.select(this).style("fill","#A19B9A");
+	        })
+	        .on("mouseout", function(d){
+	        	//console.log("mouseout of "+d.name);
+	        	resetHighlightBarGraph(dict[d.name]);
+	        	d3.select(this).style("fill","black");
 	        });
 
 	    //add a value label to the right of each bar
@@ -165,22 +227,10 @@ function drawBarGraph()
 	        .text(function (d) {
 	            return d.value;
 	        });
+	}
+	drawBarGraph();
 
-}
-drawBarGraph();
-
-queue()
-	.defer(d3.csv, 'assets/data/StateGunDeathsModified.csv')
-	.defer(d3.json, 'assets/data/(OUTPUT) state_deaths_loc.json')
-	.await(load_data_func);
-
-function load_data_func(error, states_xls, state_deaths)
-{
-	let StateGunDeaths = states_xls;
-	let StateGunDeathsLoc = state_deaths;
-	//console.log(StateGunDeathsLoc);
-
-	var map = L.map('map').setView([37.8, -96], 4);
+	var map = L.map('map').setView([54, -96], 3);
 
 	var femaleDeathIcon = L.icon({
 		
@@ -261,7 +311,7 @@ function load_data_func(error, states_xls, state_deaths)
 		
 		d3.json("assets/data/(OUTPUT) state_deaths_loc.json", function(data) {
 		  StateGunDeathsLoc = data;
-		  console.log(StateGunDeathsLoc);
+		  //console.log(StateGunDeathsLoc);
 		}); 
 	}
 
@@ -301,35 +351,122 @@ function load_data_func(error, states_xls, state_deaths)
 
 	function highlightFeature(e) {
 		var layer = e.target;
-
-		layer.setStyle({
-			weight: 5,
-			color: '#666',
-			dashArray: '',
-			fillOpacity: 0.7
-		});
-
+		//console.log(e);
+		if(e.target != store)
+		{
+			layer.setStyle({
+				weight: 5,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.7
+			});
+		}
+		//console.log(e);
+		//console.log(e.target._leaflet_id);
 		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
 			layer.bringToFront();
 		}
 
 		info.update(layer.feature.properties);
+
+	}
+
+	function highlightFeatureBarGraph(layer) {
+		if(store != layer)
+		{
+			layer.setStyle({
+				weight: 5,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.7
+			});
+			if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+				layer.bringToFront();
+			}
+
+			info.update(layer.feature.properties);
+		}
+		else
+		{
+			layer.setStyle({
+				weight: 5,
+				color: '#999',
+				dashArray: '',
+				fillOpacity: 0.4
+			});
+			if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+				layer.bringToFront();
+			}
+
+			info.update(layer.feature.properties);	
+		}
+	}
+	
+	function resetHighlightBarGraph(layer) {
+		if(store != layer)
+		{
+			geojson.resetStyle(layer);
+			info.update();
+		}
+		else
+		{
+			layer.setStyle({
+				weight: 5,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.1
+			});
+		}
 	}
 
 	var geojson;
 
 	function resetHighlight(e) {
-		geojson.resetStyle(e.target);
-		info.update();
+		if(e.target != store)
+		{
+			//console.log(targetLayer+" "+e.target);
+			geojson.resetStyle(e.target);
+			info.update();
+		}
 	}
-
+	
 	function zoomToFeature(e) {
 		map.fitBounds(e.target.getBounds());
 
 		//console.log(e.target);
 		//console.log(e.target.feature.properties.NAME);
 		//var map_points = L.map('map').setView([37.8, -96], 4);
+
 		plotPoints(e.target.feature.properties.NAME);
+		if(store)
+		{
+			store.setStyle({
+				weight: 5,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.7
+			});
+			geojson.resetStyle(store);
+			info.update();
+		}
+
+		store = e.target;
+		e.target.setStyle({
+			weight: 5,
+			color: '#666',
+			dashArray: '',
+			fillOpacity: 0.1
+		});
+		console.log(e.target);
+		let total_deaths = document.getElementById('tot_deaths');
+		let male_deaths = document.getElementById('male_deaths');
+		let female_deaths = document.getElementById('female_deaths');
+		let city = document.getElementById('city');
+
+		city.innerHTML = " "+e.target.feature.properties.NAME+",";
+		total_deaths.innerHTML = " "+e.target.feature.properties.deaths+" people";
+		male_deaths.innerHTML = " "+e.target.feature.properties.male_deaths+" people";
+		female_deaths.innerHTML = " "+e.target.feature.properties.female_deaths+" people";
 	}
 
 	function plotPoints(name)
@@ -345,6 +482,8 @@ function load_data_func(error, states_xls, state_deaths)
 		  //if(markerGroup)
 		  markerGroup.remove();
 		  markerGroup = L.layerGroup().addTo(map);
+		  ageMChildern =0; ageMYouth=0; ageMAdults=0; ageMSeniors=0; ageMUnknown=0;
+		  ageFChildern=0; ageFYouth=0; ageFAdults=0; ageFSeniors=0; ageFUnknown=0;
 		  for(let i=0;i <StateGunDeathsLoc[name].length; i++)
 		  {  
 			let lat = StateGunDeathsLoc[name][i].lat;
@@ -358,7 +497,55 @@ function load_data_func(error, states_xls, state_deaths)
 			//age = parseInt(age);
 			//console.log(age);
 			if(age=="")
+			{
 				age ="Not Available";
+			}
+			else
+			{	ageChildern=0;
+				ageYouth=0;
+				ageAdults=0;
+				ageSeniors=0;
+				let ageDOM = parseInt(age);
+				if(StateGunDeathsLoc[name][i].gender == 'F')
+				{
+					if(ageDOM <=14)
+					{
+						ageFChildern++;
+					}
+					else if(ageDOM <= 24)
+					{
+						ageFYouth++;
+					}
+					else if(ageDOM <= 64)
+					{
+						ageFAdults++;
+					}
+					else
+					{
+						ageFSeniors++;
+					}
+				}
+				else if(StateGunDeathsLoc[name][i].gender == 'M')
+				{
+					if(ageDOM <=14)
+					{
+						ageMChildern++;
+					}
+					else if(ageDOM <= 24)
+					{
+						ageMYouth++;
+					}
+					else if(ageDOM <= 64)
+					{
+						ageMAdults++;
+					}
+					else
+					{
+						ageMSeniors++;
+					}
+				}
+			}
+
 
 			let date = StateGunDeathsLoc[name][i].date;
 			let url = StateGunDeathsLoc[name][i].url;
@@ -378,18 +565,33 @@ function load_data_func(error, states_xls, state_deaths)
 				addToMap(lat, lng, undefinedDeathIcon, text_embed);
 			}
 		  }
-
+		  populate();
 		//});
 	}
+	function populate()
+	{
+		let ageMCategories = document.getElementById('ageMCategories');
+	  	let ageFCategories = document.getElementById('ageFCategories');
+	
+		ageMCategories.innerHTML = " (Children:"+ageMChildern+" Youth:"+ageMYouth+" Adults:"+ageMAdults+" Seniors:"+ageMSeniors+")";
+		ageFCategories.innerHTML = " (Children:"+ageFChildern+" Youth:"+ageFYouth+" Adults:"+ageFAdults+" Seniors:"+ageFSeniors+")";
+	}
 
+	let val=0;
 	function onEachFeature(feature, layer) {
+		
 		layer.on({
 			mouseover: highlightFeature,
 			mouseout: resetHighlight,
 			click: zoomToFeature
 		});
+		dict[layer.feature.properties.NAME] = layer;
+		if(val==0)
+		{
+			val=1;
+		}
 	}
-
+	//console.log(store);
 	geojson = L.geoJson(states, {
 		style: style,
 		onEachFeature: onEachFeature
@@ -420,6 +622,33 @@ function load_data_func(error, states_xls, state_deaths)
 		return div;
 	};
 	legend.addTo(map);
+
+
+	$( "#refresh" ).click(function() 
+	{
+	  	document.getElementById("tot_deaths").innerHTML = tot_deaths+" people";
+		document.getElementById("male_deaths").innerHTML = mal_deaths;
+		document.getElementById("female_deaths").innerHTML = fem_deaths;
+		document.getElementById("ageMCategories").innerHTML = "";
+		document.getElementById("ageFCategories").innerHTML = "";
+
+		if(store)
+		{
+			store.setStyle({
+				weight: 5,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.7
+			});
+			geojson.resetStyle(store);
+			info.update();
+		
+			markerGroup.remove();
+			markerGroup = L.layerGroup().addTo(map);
+		}
+		map.setView([54, -96], 3);
+		//map.panTo(new L.LatLng(40.737, -73.923));
+	});
 }
 </script>
 
