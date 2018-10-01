@@ -549,8 +549,9 @@ function load_data_func(error, states_xls, state_deaths)
 
 			let date = StateGunDeathsLoc[name][i].date;
 			let url = StateGunDeathsLoc[name][i].url;
+			let city = StateGunDeathsLoc[name][i].city;
 
-			let text_embed= "Name : "+name1+"<br> Age : "+ age +"<br> Date : "+ date+"<br> Url : <a href='"+url+"'>Learn more</a>";
+			let text_embed= "Name : "+name1+"<br> Age : "+ age +"<br> Date : "+ date+"<br> City : "+city+"<br>Url : <a href='"+url+"'>Learn more</a>";
 
 			if(StateGunDeathsLoc[name][i].gender == 'F')
 			{
