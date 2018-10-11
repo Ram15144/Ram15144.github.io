@@ -11,44 +11,15 @@
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="../assets/css/style-ar-vr.css" rel="stylesheet">
 </head>
+<script>
+	$(document).ready(function(){
+	    $("#navbar-frame").load("ar-vr-navbar.html");
+	});
+</script>
 <body>
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">CS-491</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="../ar-vr.html">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-					</li>
-					<li class="dropdown nav-item">
-				        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Assignments
-				        <span class="caret"></span></a>
-				        <ul class="dropdown-menu">
-				          <li><a href="#" class="nav-link">Pros/Cons of AR/VR</a></li>
-				          <li><a href="vufora-astronaut.html" class="nav-link">Vufora Astronaut</a></li>
-				          <li><a href="google-translate.html" class="nav-link">Google Translate</a></li>
-				          <li><a href="star-gazing.html" class="nav-link">Star Gazing</a></li>
-				          <li><a href="#" class="nav-link">Project 1: Eat It! Reviews</a></li>
-				        </ul>
-				    </li>
-					<li class="dropdown nav-item">
-				        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Projects
-				        <span class="caret"></span></a>
-				        <ul class="dropdown-menu">
-				          <li><a href="project1.html" class="nav-link">Project 1</a></li>
-				        </ul>
-				    </li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<div id="navbar-frame"></div>
+
 	<figure>
 		<div class="fixed-wrap">
 		<img class="image-top1" src="../assets/img/ar-vr/procon1.jpg" class="responsive"> 
