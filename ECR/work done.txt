@@ -1,0 +1,5 @@
+Data Preprocessing:
+1. Changed all the blocks with no id's to NULL
+
+Front end:
+1. Solved JS non responsive UI when updating progress bar using 
