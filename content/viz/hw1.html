@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Visual Data Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="../assets/css/style-ar-vr.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">CS-594</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="dropdown nav-item">
+				        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Assignments
+				        <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="ar-vr/pros-cons.html" class="nav-link">Homework 1</a></li>
+				        </ul>
+				    </li>
+					<li class="dropdown nav-item">
+				        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Projects
+				        <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="#" class="nav-link">Nothing yet</a></li>
+				        </ul>
+				    </li>
+				</ul>
+			</div>
+		</div>
+</nav>
+
+<!--
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-3 col-xl-2">
+			<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+				<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true">Profile</a>
+				<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-vizdiag" role="tab" aria-controls="v-pills-messages" aria-selected="false">Interesting Visualization</a>
+				<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-svg" role="tab" aria-controls="v-pills-settings" aria-selected="false">SVG Graphics</a>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-9 col-xl-10">
+			<div class="tab-content" id="v-pills-tabContent">
+				<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+									<div class="container-fluid">
+										<div class="row jumbotron" style="background-color:transparent !important;">
+												<div class="col-xs-12 col-sm-12 col-md-5 col-lg-3 col-xl-3">
+													<img src="../assets/img/viz/me2.jpeg" class="rounded float-left" style="display: block;
+														width: 100%; 
+														height: auto;">
+												</div>
+													
+												<div class="col-xs-12 col-sm-12 col-md-7 col-lg-9 col-xl-9">
+													<p class="lead" style="font-size:15pt;"> Virtual reality (VR) is an interactive computer-generated experience taking place within a simulated environment, that incorporates mainly auditory and visual, but also other types of sensory feedback like haptic.</p>
+													<div style="float: right;"><i>~ Wikipedia</i></div>
+												</div>
+										</div>
+									</div>	
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="v-pills-vizdiag" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+				<div class="col-xs-12 col-sm-12 col-md-7 col-lg-9 col-xl-9">
+					<p class="lead" style="font-size:15pt;"> Virtual reality (VR) is an interactive computer-generated experience taking place within a simulated environment, that incorporates mainly auditory and visual, but also other types of sensory feedback like haptic.</p>
+					<div style="float: right;"><i>~ Wikipedia</i></div>
+				</div>
+			</div>
+			
+			<div class="tab-pane fade" id="v-pills-svg" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+		</div>
+	</div>
+</div>
+
+-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-3 col-xl-2">
+			<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+				<a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+				<a class="nav-link" id="v-pills-vizdiag-tab" data-toggle="pill" href="#v-pills-vizdiag" role="tab" aria-controls="v-pills-messages" aria-selected="false">Interesting Visualization</a>
+				<a class="nav-link" id="v-pills-svg-tab" data-toggle="pill" href="#v-pills-svg" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+				<a class="nav-link" id="v-pills-credits-tab" data-toggle="pill" href="#v-pills-credits" role="tab" aria-controls="v-pills-credits" aria-selected="false">Credits</a>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-9 col-xl-10">
+			<div class="tab-content" id="v-pills-tabContent">
+				<div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-home-tab">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-5 col-lg-3 col-xl-3">
+								<img src="../assets/img/viz/me2.jpeg" class="rounded float-left" style="display: block;
+									width: 100%; 
+									height: auto;">
+							</div>
+								
+							<div class="col-xs-12 col-sm-12 col-md-7 col-lg-9 col-xl-9">
+								<p class="lead" style="font-size:15pt;"> My name is V. Ram Narayanan. But due to a passport mishap my offical name is "Ramnarayanan Vannia Samy". Let's just settle with Ram.
+								</p>
+								<p>
+								Some peeople say words appear in their head when they try to think about something. I am not one of those people. There are more of images or videos in my head. I was taught at a very young age how to learn by visualization, so that you can remember things easily. I clearly remember a presentation that was given by a mathematician in my school. He told he had a very sound memory and that he could rememer the names of all the people in that auditorium. And so we each announced all our names one by one. To my surprise he didn't just remember the names in order, he could tell the names of any randomly selected person in the crowd!
+								</p>
+								<p>
+								He went on to explain the power of learning through visualization. For example, he remembered a girl called Julia by an image of a Jewel. So in his head Julia = Jewel. He did that for every single person in the auditorium. Although he had an amazing and fast memory power it would have been impossible for him to remember the names of an auditorium of 50 people without constant practise of such tactics. This was an important event in my life that made me interested in drawing, video editing, animations, games and made me pursue the more artistic side of computer science. 
+								</p>
+								<p>
+								While I still was realising my calling for the visual side of computer science I became learnt mobile application development, algorithms, data bases, Data Mining and Artificial Intelligence. Apart from visualization I am interested in algorithms and solving problems using data structures.
+								</p>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<div class="tab-pane fade" id="v-pills-vizdiag" role="tabpanel" aria-labelledby="v-pills-vizdiag-tab">
+					
+				</div>
+
+				<div class="tab-pane fade" id="v-pills-svg" role="tabpanel" aria-labelledby="v-pills-svg-tab">
+					
+				</div>
+
+				<div class="tab-pane fade" id="v-pills-credits" role="tabpanel" aria-labelledby="v-pills-credits-tab">
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

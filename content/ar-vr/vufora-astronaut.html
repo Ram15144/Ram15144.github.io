@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unity and Vufora - AR Astronaut</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="../assets/css/style-ar-vr.css" rel="stylesheet">
+</head>
+<script>
+	$(document).ready(function(){
+	    $("#navbar-frame").load("ar-vr-navbar.html");
+	});
+</script>
+<body>
+	<!-- Navigation -->
+	<div id="navbar-frame"></div>
+
+	<figure>
+		<div class="fixed-wrap">
+
+		<img class="image-top1" src="../assets/img/ar-vr/procon1.jpg" class="responsive"> 
+			<div class="carousel-caption">
+				<h2 class="display-4 carousel-caption" style="font-size: 25pt; text-align: left; float: left;">Using Unity and Vufora to create AR Astronaut</h2>
+			</div>
+		</div>
+	</figure>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-12">
+					<h3 class="crousel-caption" style="text-align: center; padding-bottom: 1em; border-bottom: 1px solid #000;"> Developing Augmented Reality application using <b>Unity and Vufora</b></h3>
+					<img class="col-12 mx-auto d-block" style="width: 350px; height: auto; float:center; border-radius: 20px;" src="../assets/img/ar-vr/arvr-astronaut.jpg"/>
+					<p class="lead"> Augmented Reality is just incredible. Today's technology is improving at an exponential rate that even common people like us are able to build and use AR applications. A 2D image on the screen appearing as a 3D model in your hand, although in theory is nothing great in this day and age, does leave you astounded when you experience it for yourself and makes you wonder of what are the possibilities that can come from this.</p>
+				</div>
+			</div>
+				
+			<div class="row">
+				<div class="col-12">
+					<h2 style="text-align: left; border-bottom: 1px solid #b4b4b4; font-family: 'Lobster', sans-serif;">Developing the Application</h2>
+					<p class="lead" style="font-size:15pt;">
+						The entire software of Unity was easy to install and use. The models, textures and animations can be easily created and added to the screen via a mere drag and drop. On top of this Vufora developers have done an amazing job developing the software. It is so seamlessly integrated into Unity. It allows for detecting an image, cuboid, cylinder or a 3D object which is pretty much anything in our perceived surroundings. Computer Vision has jumped leaps and bounds that an immediate configuration of a model using pictures of it can immediately be imported to Unity and used to classify objects in the real world. It has sample scenes that can be used to test and understand how the software works. Initially you need to add a license that Vufora provides and then you can proceed with adding images to the database that can be used to classify later (There was a little problem with the software for detecting PNG files but JPG works just fine). It also gives you the rating of the picture you posted which indicates the probability that the image can be identified correctly in the real world. 
+					</p>
+					<p class="lead" style="font-size:15pt;">
+						After the database is set up you can import it to Unity. An image target needs to be selected, the database should be linked and the model to be displayed upon discovery needs to be added as a child to the image target. That's it! Congratulations on developing your first real Augmented Reality application. It was a moment of joy.
+					</p>
+					<img class="col-12 mx-auto d-block" style="float: center; width: 250px; height: auto; float:center; border-radius: 20px;" src="../assets/img/ar-vr/arvr-astronaut2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-12">
+					<h2 style="text-align: left; border-bottom: 1px solid #b4b4b4; font-family: 'Lobster', sans-serif;">Building the Scene</h2>
+					<p class="lead" style="font-size:15pt;">
+						Then I started wondering if anything more can be done. Sure I added animations. How would I make the scene more authentic? Some space rocks, a drone, the habitat. But still the scene seemed too static. So I went ahead and threw in a real video. All this in a matter of minutes! Ofcourse I wouldn't have been able to do it if the precompiled models and animations were not present(thank you once again vufora). I was surprised to see that the there was very minimal jitter and the models stayed exactly where they had to. It's very impressive.
+					</p>
+					<img class="col-12 mx-auto d-block" style="width: 250px; height: auto; float:center; border-radius: 20px;" src="../assets/img/ar-vr/arvr-astronaut3.jpg"/>
+					<p class="lead" style="font-size:15pt;">
+						This technology can be used extensively in educational field to make education interactive and fun just using a phone. But when the phone focuses off the scene it takes a while to get the models to load when the image is broght back to the focus of the camera again. This is one drawback as the image or the object the software needs to detect should always be in the scene. It would be useful to gain knowledge on the object but it wouldn't be much use if we do not have the image. Also interacting with the model is difficult with the phone in the hand. Using Google Hololens or VR in HTC Vive helps to move around freely and analyse without an anchor point.  
+					</p>
+					<p class="lead" style="font-size:15pt;">					
+						But using this software is an amazing start for beginners to get their foot into the Augmented Reality world.  
+					</p>
+					<p class="lead" style="font-size:15pt;">					
+						Take a look at the video below for the live demo.
+					</p>
+				</div>
+			</div>
+			<div class="col-12">
+				<iframe width="100%" height="400" style="float: center;"src="https://www.youtube.com/embed/470ZgjbKnog" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="embed-responsive embed-responsive-4by3">
+	  <iframe width="420" height="315" src="https://youtu.be/470ZgjbKnog" frameborder="0" allowfullscreen></iframe>
+	</div> -->
+
+</body>
+</html>
