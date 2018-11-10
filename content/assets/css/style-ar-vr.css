@@ -15,7 +15,7 @@ html, body{
   padding: .3rem; 
 }
 .navbar-nav li{
-  padding: 10px;
+  padding-left: 5px;
 }
 .nav-link{
   font-size: 1.1em !important;
@@ -183,4 +183,9 @@ Extra (xl) large devices (large desktops, 1200px and up)
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
 }
