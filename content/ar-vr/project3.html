@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Augmented Reality Virtual Reality</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="../assets/css/style-ar-vr.css" rel="stylesheet">
+</head>
+<script>
+	$(document).ready(function(){
+	    $("#navbar-frame").load("ar-vr-navbar.html");
+	});
+</script>
+<body>
+	<!-- Navigation -->
+	<div id="navbar-frame"></div>
+
+	<figure>
+		<div class="fixed-wrap">
+		<img class="image-top1" src="../assets/img/ar-vr/procon1.jpg" class="responsive"> 
+			<div class="carousel-caption">
+				<h2 class="display-4 carousel-caption" style="font-size: 25pt; text-align: left; float: left;">Android App: ARPhysics</h2>
+			</div>
+		</div>
+	</figure>
+	<div class="container-fluid">
+		<div class="row jumbotron">
+			<div class="col-12">
+				<h1 class="crousel-caption" style="text-align: center; padding-bottom: 1em; border-bottom: 1px solid #000;"> Team Members</h1>
+				<p class="lead"></p>
+			</div>
+
+			<div class="col-12 lead">
+				<ul>
+					<li>Ramnarayanan Vannia Samy</li>
+					<li>Adhokshith Datta</li>
+					<li>Sai Phaltankar</li>
+				</ul>
+			</div>
+
+			<div class="col-12" style="padding: 10px 0px 0px; border-bottom: 1px solid #b4b4b4;">
+			<h2 style="text-align: left; font-family: 'Lobster', sans-serif;">Important Links</h2>
+			</div>
+
+			<!-- Links to Google docs, zipped project and youtube video -->
+			<div class="col-12">
+				<a href="https://drive.google.com/drive/u/0/folders/1gG1m4guHNWQnAwAjyoyHyXkx_UO34buv?ogsrc=32" class="btn btn-outline-primary btn-lg active" role="button" aria-pressed="true">Apk File</a>
+				<br><br>
+				<a href="https://www.youtube.com/watch?v=Wq4OAUfqYEY&feature=youtu.be" class="btn btn-outline-primary btn-lg active" role="button" aria-pressed="true">Youtube Video Link</a>
+				<br><br>
+				<p class="lead">
+					The instructions to run the project are written towards the end of this page.
+				</p>
+			</div>
+
+			<!-- Youtube video -->
+			<div class="embed-responsive embed-responsive-16by9">
+			  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Wq4OAUfqYEY" allowfullscreen></iframe>
+			</div>
+
+			<!-- Instructions to run the project -->
+			<div class="col-12" style="padding: 10px 0px 0px; border-bottom: 1px solid #b4b4b4;">
+			<h2 style="text-align: left; font-family: 'Lobster', sans-serif;">Introduction</h2>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+					<p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						ARPhysics is an android application developed in Unity using ARCore. Why physics?
+					</p>
+					<p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						Let us start with what is physics. Physics is the study of matter, energy and their interactions - is an international enterprise, which plays a key role in the future progress of humankind. It is an exciting intellectual adventure that inspires people and expands the frontiers of our knowledge about Nature. It is an important element in the education of chemists, engineers and computer scientists, as well as practitioners of the other physical and biomedical sciences and it also extends and enhances our understanding of other disciplines, such as the earth, agricultural, chemical, biological, and environmental sciences, plus astrophysics and cosmology - subjects of substantial importance to all peoples of the world. Physics improves our quality of life by providing the basic understanding necessary for developing new instrumentation and techniques for medical applications, such as computer tomography, magnetic resonance imaging, positron emission tomography, ultrasonic imaging, and laser surgery. The uses are endless.
+					</p>
+					<p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						ARPhysics lets you experience some of the above mentioned fields of physics research and enjoy playing some physics related games anywhere and anytime from your spot. It provides a more interactive way to learn the concepts.
+					</p>
+				</div>
+			</div>
+
+
+			<div class="col-12" style="padding: 10px 0px 0px; border-bottom: 1px solid #b4b4b4;">
+			<h2 style="text-align: left; font-family: 'Lobster', sans-serif;">Project Components</h2>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+					<p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						The Project consists of three options.
+					</p>
+					<ol>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							The first option is the tutorial which gets you familiarized with the interface, such as adding objects to the scene and interacting with the added components.
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						The second option has a total of 6 different levels which are mentioned as follows:
+						<ul>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								Simulate your own solar system: This is an interesting level in which you are shown the sun in front of you. You can choose to add the number of planets you want, simulate gravity, change mass and properties of the sun, etc.
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								Newtonian level: This is a puzzle level to make the apple fall on Sir Isaac Newton. You are provided with a few objects to achieve the task.
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								un with Laser: The goal of this level is to hit the sphere in the play area with the laser beam. Once the play area is loaded, the user can add mirrors/reflective objects and rotate them appropriately  to the reflect the laser beam to hit the target.
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								Light it up: This level includes a puzzle where the goal is to light up all the bulbs in the play area. Use the ‘+’ and ‘x’ icons on the right of the screen to make and delete connections between elements of the grid. The users need to pay attention to the material of the element as we all know, not all material conduct electricity.
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								Solar System: This level includes a small mini game involving the solar system. All the planets have their own mass and gravitational pull. This pull affects objects that come within the vicinity of the planet. This is varying due to the difference in material and mass. The scene also shows the orbits of all the planets in the solar system. The user can click on any of the planets to zoom into it and try to hit the alien and blocks that are present on the planet. Forces of gravity influence the difficulty of each level.
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								Basketball: The objective is to get the ball into the hoop. The scene shows a setup with blocks and a ball before adding gravity. Once gravity is added, the contraption falls down but the ball doesn’t reach the hoop. With the help of three objects, the user need to size the objects and place it in the scene in such a way that the ball falls into the hoop.
+							</p></li>
+						</ul>
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							The third option is the AR portal that takes you to another world (it is the video you select that will be played as a 360 degree video). 
+							</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+
+			<div class="col-12" style="padding: 10px 0px 0px; border-bottom: 1px solid #b4b4b4;">
+			<h2 style="text-align: left; font-family: 'Lobster', sans-serif;">Source Code</h2>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+					<p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						The unity project can be found <a href="https://drive.google.com/open?id=1XIZbZXhZz6PaiLCDGavqlQgtTYv7XRIQ">here</a>.
+					</p>
+					<p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						You can also download the apk file <a href="https://drive.google.com/drive/u/1/folders/1gG1m4guHNWQnAwAjyoyHyXkx_UO34buv?ogsrc=32">here</a>.
+					</p>
+				</div>
+			</div>
+
+			<div class="col-12" style="padding: 10px 0px 0px; border-bottom: 1px solid #b4b4b4;">
+			<h2 style="text-align: left; font-family: 'Lobster', sans-serif;">Install Instructions</h2>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+					<p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						You will require an Android phone running version 7.0 or above to run and use the application.
+					</p>
+					<p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						The easiest way to install the application is to download the apk file provided above. Copy it onto your android phone if you download it on a computer/laptop. Navigate to the file using the file explorer on your phone. Click on the application icon to install it. Make you you allow installation of applications from unknown sources. Once installed, just click on the application icon in your applications drawer to launch the application. Have fun exploring!
+					</p>
+					<p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+						You can also run the unity project itself to install the application on your android phone. Download the unity project from above and open it using the Unity editor. You’ll need to setup your unity editor to run an android application. Follow the instruction given <a href="https://docs.unity3d.com/Manual/android-sdksetup.html">here</a>. Once you have the setup ready, connect your android device. Make sure target platform selected in the the build setting is Android. Also make all the following scenes are checked:
+					</p>
+					<ol>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							Main Menu
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							Sample Scene
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							Gravity
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							Simulate your System !
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							ChallengeBall2
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							Optics_Laser
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							Newton_Gravity
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							Electric2
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							New Settings
+						</p></li>
+						<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+							NewChallengeMenu
+						</p></li>
+					</ol>
+				</div>
+			</div>
+
+
+			<div class="col-12" style="padding: 10px 0px 0px; border-bottom: 1px solid #b4b4b4;">
+			<h2 style="text-align: left; font-family: 'Lobster', sans-serif;">Resources</h2>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<h3 style="text-align: left; font-family: 'Lobster', sans-serif;">Assets</h3>
+					<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
+					</div>
+					<div class="col-12">
+						<ol>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://www.flaticon.com/free-icon/idea_148819#term=idea&page=1&position=2">Flaticon bulb</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://www.flaticon.com/free-icon/light_1245920#term=stage&page=1&position=25">IBM Watson Text to Speech</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://assetstore.unity.com/packages/vfx/particles/fire-explosions/fx-explosion-pack-30102">Unity Assets: Explosions</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://assetstore.unity.com/packages/3d/props/food/fruits-pack-3d-models-91669">Unity Assets: Fruits Pack - 3D Models</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://sketchfab.com/models/aa12ebbdbc694fd9bd2943a3087bbacb">Sketchfab: Invader Zim</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://www.turbosquid.com/FullPreview/Index.cfm/ID/505822">Turbosquid: Incandescent Glass Light Bulb</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://assetstore.unity.com/packages/2d/textures-materials/metals/yughues-free-metal-materials-12949">Unity Assets: Yughues Free Metal Materials</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-battery-pack-free-19738">Unity Assets: Sci-fi Battery Pack</a>
+							</p></li>
+						</ol>
+					</div>
+				</div>
+
+
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<h3 style="text-align: left; font-family: 'Lobster', sans-serif;">Audio</h3>
+					<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
+					</div>
+					<div class="col-12">
+						<ol>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://www.youtube.com/watch?v=ZXDnOHCbems">Stellardrone - Crocket's Theme Remix</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="http://soundbible.com/1003-Ta-Da.html">Tadaa</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://www.youtube.com/watch?v=Gn9zwtaAPb0&index=7&list=PLxAkyFEMgDjOcJDe7u8Wr6duKGDArn5EC">TwoDots</a>
+							</p></li>
+							<li><p class="lead" style="margin: 10px 5% 0px 5%; text-align: justify;"> 
+								<a href="https://www.youtube.com/watch?v=8wLwxmjrZj8&t=444s">Soothing Space Music</a>
+							</p></li>
+						</ol>
+					</div>
+				</div>
+
+			</div>
+		
+		</div>
+	</div>
+
+</body>
+</html>
