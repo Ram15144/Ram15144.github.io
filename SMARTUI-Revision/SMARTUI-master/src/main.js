@@ -350,7 +350,7 @@ App.cohortVariables = ["Dummy ID","Tm Laterality (R/L)","Affected Lymph nodes","
 
     App.models.patient=new PatientModel();
     App.models.applicationState = new ApplicationStateModel();
-    App.models.kaplanMeierPatient = new KaplanMeierPatientModel();
+    //App.models.kaplanMeierPatient = new KaplanMeierPatientModel();
 
     App.controllers.patientSelector = new InputFillController();
     App.controllers.nomogramSelector = new NomogramSelector();
@@ -369,7 +369,7 @@ App.cohortVariables = ["Dummy ID","Tm Laterality (R/L)","Affected Lymph nodes","
       App.controllers.nomogram = new NomogramOptions("#nomogramOptions");
       App.controllers.axisControl = new AxisSlider();
       App.controllers.nomogramSelector.init();
-      App.controllers.kaplanOptions = new KaplanMeierOptions("#kaplanOptions");
+      /*App.controllers.kaplanOptions = new KaplanMeierOptions("#kaplanOptions");
       App.controllers.kaplanOptions.selectOption("#kaplanOptions");
 
       App.views.kaplanMeier = new KaplanMeierView("#kaplanMeier");
@@ -379,10 +379,10 @@ App.cohortVariables = ["Dummy ID","Tm Laterality (R/L)","Affected Lymph nodes","
       App.views.kaplanMeier.setMaxOS(maxOS);
       let x=App.models.kaplanMeierPatient.getKaplanMeierPatients();
       let a = App.views.kaplanMeier.update(x);
-      
+      */
       App.views.cohort = new CohortView();
 
-      App.views.kiviat = new KiviatDiagramView("#kiviatDiagramSection");
+      //App.views.kiviat = new KiviatDiagramView("#kiviatDiagramSection");
     })
     .catch(function(err) {
               console.log("Promise Error", err);

@@ -139,7 +139,6 @@ Nomogram.prototype.draw = function() {
 						obj.domain = ["", this.plotData[0][obj.name], ""];
 					}
 				}
-
 				return obj;
 			});
 		} else {

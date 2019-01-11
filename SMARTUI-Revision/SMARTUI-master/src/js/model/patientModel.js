@@ -106,7 +106,6 @@ let PatientModel = function() {
   {
       let score = 0;
       let tieBreaker = -(Math.abs(self.patients[patientID]["Age at Diagnosis (Calculated)"]-self.patients[subjectID]["Age at Diagnosis (Calculated)"]));
-
       score+=tieBreaker;
 
       for(let attribute of attributesSelected)
