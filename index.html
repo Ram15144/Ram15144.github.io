@@ -29,6 +29,13 @@
 	<link rel="stylesheet" href="css/magnific-popup.css" />
 	<link rel="stylesheet" href="css/animate.css" />
 	<link rel="stylesheet" href="css/gradient.css" />
+	<link rel="stylesheet" href="css/custom-icons.css" />
+	
+	<!--
+		Modern Ionicons Web Component
+	-->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	
 	<!--
 		Template Colors
@@ -103,9 +110,21 @@
 							</a>
 						</li>
 						<li>
-							<a href="#resume-card">
+							<a href="#experience-card">
+								<span class="icon ion-briefcase"></span>
+								<span class="link">Experience</span>
+							</a>
+						</li>
+						<li>
+							<a href="#education-card">
+								<span class="icon ion-university"></span>
+								<span class="link">Education</span>
+							</a>
+						</li>
+						<li>
+							<a href="#projects-card">
 								<span class="icon ion-android-list"></span>
-								<span class="link">Resume</span>
+								<span class="link">Projects</span>
 							</a>
 						</li>
 						<li>
@@ -117,15 +136,15 @@
 						<li>
 							<a href="#blog-card">
 								<span class="icon ion-ios-book"></span>
-								<span class="link">Subjects</span>
+								<span class="link">UIC</span>
 							</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="#contacts-card">
 								<span class="icon ion-at"></span>
 								<span class="link">Contact</span>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 
@@ -146,7 +165,7 @@
 
 					<!-- profile photo -->
 					<div class="image">
-						<img src="images/profile_me1.jpeg" alt="" />
+						<img src="images/profile_me3.jpeg" alt="" />
 					</div>
 
 					<!-- profile titles -->
@@ -165,8 +184,8 @@
 					</div>
 					
 					<!-- profile buttons -->
-					<div class="lnks">
-						<a href="resume/Ramnarayanan_Vannia_Samy_Resume1.pdf" class="lnk" download>
+					<!-- <div class="lnks">
+						<a href="resume/RamnarayananVanniaSamyResume.pdf" class="lnk" download>
 							<span class="text">Download CV</span>
 							<span class="ion ion-archive"></span>
 						</a>
@@ -174,7 +193,7 @@
 							<span class="text">Contact Me</span>
 							<span class="arrow"></span>
 						</a>
-					</div>
+					</div> -->
 
 				</div>
 
@@ -199,16 +218,15 @@
 							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
 								<div class="text-box">
 									<p>
-										I am Ram Narayanan, Software developer from USA, Illinois. I have rich development experience in Augmented Reality/ Virtual Reality, games, full stack, Data Visualization, Android Mobile Applications, IBM Watson, and also I am good at C++.
-
+										Software Developer with 6+ years of experience building scalable and impactful software solutions in IoT, Cloud Computing (Azure), and AI-driven platforms. Currently a Software Development Engineer II at Microsoft, specializing in operational excellence, global-scale deployments, telemetry optimization, and network security integrations. Skilled in Rust, C++, AR/VR, full-stack development, Android apps, data visualization, IBM Watson, and recently developed an AI-powered e-commerce platform leveraging OpenAI frameworks. Passionate about innovation and continuously exploring advancements in artificial intelligence.
 									</p>
 								</div>
 								<div class="info-list">
 									<ul>
-										<li><strong>Age . . . . .</strong> 23</li>
+										<li><strong>Age . . . . .</strong> 29</li>
 										<li><strong>Residence . . . . .</strong> USA</li>
 										<!-- <li><strong>Freelance . . . . .</strong> Available</li> -->
-										<li><strong>Address . . . . .</strong> Illinois, USA</li>
+										<li><strong>Address . . . . .</strong> Nashua, NH</li>
 									</ul>
 								</div>
 							</div>
@@ -223,10 +241,31 @@
 					<div class="content services">
 
 						<!-- title -->
-						<div class="title">My Services</div>
+						<div class="title">Experience</div>
 
 						<!-- content -->
 						<div class="row service-items border-line-v">
+
+							<!-- service item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
+								<div class="service-item">
+									<div class="icon"><span class="ion ion-ai-brain"></span></div>
+									<div class="name">Gen AI</div>
+									<p>
+										Developed an agentic commerce platform leveraging OpenAI frameworks. Built a chatbot using autogen, MCP and RAG.
+									</p>
+								</div>
+							</div>
+
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
+								<div class="service-item">
+									<div class="icon"><span class="ion ion-database-web-app-code"></span></div>
+									<div class="name">Backend/Cloud Developer</div>
+									<p>
+										Designed and optimized scalable backend systems and APIs, leveraging cloud-native infrastructure, automation (CI/CD), and robust observability for high availability and performance.
+									</p>
+								</div>
+							</div>
 
 							<!-- service item -->
 							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
@@ -257,7 +296,7 @@
 									<div class="icon"><span class="ion ion-android-phone-portrait"></span></div>
 									<div class="name">Mobile Development</div>
 									<p>
-										Android App Development.
+										Android/IOS App Development in Flutter.
 									</p>
 								</div>
 							</div>
@@ -265,7 +304,7 @@
 							<!-- service item -->
 							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
 								<div class="service-item">
-									<div class="icon"><span class="ion ion-ios-analytics"></span></div>
+									<div class="icon"><span class="ion ion-ios-analytics-outline"></span></div>
 									<div class="name">Data Science</div>
 									<p>
 										Domain Scientist data understanding, preprocessing, and mining with a focus on Data Visualization.  
@@ -333,12 +372,32 @@
 					<div class="content clients">
 
 						<!-- title -->
-						<div class="title">Clients</div>
+						<div class="title">Employers</div>
 
 						<!-- content -->
 						<div class="row client-items">
 
 							<!-- client item -->
+							<div class="col col-d-3 col-t-3 col-m-6 border-line-v">
+								<div class="client-item">
+									<div class="image">
+										<a target="_blank" href="https://azure.microsoft.com/en-us/products/iot-hub">
+											<img src="images/clients/microsoft.png" alt="" />
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col col-d-3 col-t-3 col-m-6 border-line-v">
+								<div class="client-item">
+									<div class="image">
+										<a target="_blank" href="https://www.elevancehealth.com/">
+											<img src="images/clients/elevance_health.jpg" alt="" />
+										</a>
+									</div>
+								</div>
+							</div>
+
 							<div class="col col-d-3 col-t-3 col-m-6 border-line-v">
 								<div class="client-item">
 									<div class="image">
@@ -371,16 +430,13 @@
 			<!--
 				Card - Resume
 			-->
-			<div class="card-inner" id="resume-card">
+			<div class="card-inner" id="experience-card">
 				<div class="card-wrap">
 
 					<!--
 						Resume
 					-->
 					<div class="content resume">
-
-						<!-- title -->
-						<div class="title">Resume</div>
 
 						<!-- content -->
 						<div class="row">
@@ -393,13 +449,34 @@
 								</div>
 								<div class="resume-items">
 									<div class="resume-item border-line-h active">
-										<div class="date">May 2018 - Present</div>
+										<div class="date">May 2022 - Present</div>
+										<div class="name">Senior Software Engineer</div>
+										<div class="company">Microsoft</div>
+										<p>
+											Developed and deployed scalable Azure-based distributed systems with 99.99% uptime, streamlined CI/CD for Kubernetes reducing release times by 50%, and enhanced observability and security through granular telemetry and network integrations. Authored tools and docs reducing support requests by 40%.
+										</p>
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">Jul 2019 - May 2022</div>
+										<div class="name">Senior developer</div>
+										<div class="company">Elevance Health</div>
+										<p>
+											Developed and optimized a scalable, secure consent management platform (React, AWS Fargate, QLDB, Lambda), achieving 50% latency reduction, streamlined deployments saving 120+ dev hours quarterly, and established robust CI pipelines and telemetry.
+										</p>
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">May 2018 - Dec 2018</div>
 										<div class="name">Data Science/Visualization</div>
 										<div class="company">University of Illinois At Chicago</div>
 										<p>
 											Building websites and interactive visualziations for scientists(oncologists) to help them better understand their data by holding regular client meetings.
 										</p>
 									</div>
+								</div>
+							</div>
+
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="resume-items">
 									<div class="resume-item border-line-h">
 										<div class="date">Jan 2018 - May 2018</div>
 										<div class="name">Application Developer</div>
@@ -421,138 +498,13 @@
 										<div class="name">Software Developer Intern</div>
 										<div class="company">National Informatics Center</div>
 										<p>
-											Designed and wrote coded a smartphone-based prompted recall travel survey that aims to support data collection initiatives for transport modelling purposes. Achieved user tracking using GPS (using Google Maps API) and storing the information in a database.
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- education -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="resume-title border-line-h">
-									<div class="icon"><i class="ion ion-university"></i></div>
-									<div class="name">Education</div>
-								</div>
-								<div class="resume-items">
-									<div class="resume-item border-line-h active">
-										<div class="date">2017 - 2019</div>
-										<div class="name">University of Illinois at Chicago</div>
-										<div class="company">Chicago, Illinois</div>
-										<p>
-											Master of Science in Computer Science<br>
-											Coursework - Video Game design and development, Mobile App Development, and Algorithm Design and Analysis, Data Mining and Text Mining, Artificial Intelligence, Data visualization, and Augmented Reality/Virtual Reality.
-										</p>
-									</div>
-									<div class="resume-item">
-										<div class="date">2013 - 2017</div>
-										<div class="name">College of Engineering, Guindy, Anna University</div>
-										<div class="company">Chennai, India</div>
-										<p>
-											Bachelor of Engineering in Computer Science
+											Designed and coded a smartphone-based prompted recall travel survey that aims to support data collection initiatives for transport modelling purposes. Achieved user tracking using GPS (using Google Maps API) and storing the information in a database.
 										</p>
 									</div>
 								</div>
 							</div>
 
 							<div class="clear"></div>
-						</div>
-
-						<div class="row">
-							<!-- projects -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="resume-title border-line-h">
-									<div class="icon"><i class="ion ion-document"></i></div>
-									<div class="name">Projects</div>
-								</div>
-								<div class="resume-items">
-									<div class="resume-item border-line-h">
-										<div class="date">Jan 2019 - Present</div>
-										<div class="name">Ankle Rehablitation Game for Stroke Patients<br> (<u>Unity, Arduino and C#</u>)</div>
-										<div class="company">UI Health, UIC, Chicago, Illinois</div>
-										<p>
-											Developed a game in which the character will be controlled by the ankle movement of the patient.<br>
-											Coded and developed different games to keep the patients foot in motion and slowly increace their brain activity and range of foot motion.
-										</p>
-									</div>
-									<div class="resume-item border-line-h">
-										<div class="date">Dec 2018</div>
-										<div class="name">Developed Augmented Reality Android application<br> (<u>Unity, ARCore and C#</u>)</div>
-										<div class="company">EVL, UIC, Chicago, Illinois</div>
-										<p>
-											Made a physics game using Unity engine physics and physics concepts such as mementum, torque and gravity.<br>
-											Coded for ground plane detection and a veriety of events upon colliding with triggers.
-										</p>
-									</div>
-									<div class="resume-item border-line-h">
-										<div class="date">Oct 2018</div>
-										<div class="name">Developed Virtual Reality application<br> (<u>Unity, VRTK and C#</u>)</div>
-										<div class="company">EVL, UIC, Chicago, Illinois</div>
-										<p>
-											Made a horror game that can be played in HTC Vive.<br>
-											Coded for a variety of events as the player moves in the 3 x 3 meter space in the room, such as walking, crawling, climbing and various object interactions.
-										</p>
-									</div>
-									<div class="resume-item border-line-h">
-										<div class="date">Sep 2018</div>
-										<div class="name">Developed Augmented Reality android application <br> (<u>Unity, Vuforia and C#</u>)</div>
-										<div class="company">EVL, UIC, Chicago, Illinois</div>
-										<p>
-											Made an application to encourage users to eat healthy using augmented reality.<br>
-											Added models on detecting objects using Computer Vision in Vuforia. Coded proximity of objects to have outcomes.
-										</p>
-									</div>
-									<div class="resume-item border-line-h">
-										<div class="date">Oct 2018</div>
-										<div class="name">Developed Virtual Reality Halloween game <br>(<u>Unity, VRTK and C#</u>)</div>
-										<div class="company">EVL, UIC, Chicago, Illinois</div>
-										<p>
-											Incorporated various jump scares to give users a surreal experience while playing the interactive horror game in Virtual Reality.
-										</p>
-									</div>
-
-									<div class="resume-item border-line-h">
-										<div class="date">May - Aug 2018</div>
-										<div class="name">Data Science	 for Geopolitical Estimation of Cancer Rates <br>(<u>QGIS, Javascript, HTML, CSS</u>)</div>
-										<div class="company">EVL, UIC, Chicago, Illinois</div>
-										<p>
-											Developed a geographic information system-based method for estimating cancer rates in non-census defined geographical areas.<br>Preprocessed the data and mapped the data to wards to visualize a data driven story.  
-										</p>
-									</div>
-								</div>
-							</div>	
-
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="resume-items">
-									<div class="resume-item border-line-h">
-										<div class="date">Feb - May 2018</div>
-										<div class="name">UIC Admission Chatbot NLP <br> (<u>IBM Watson and Node JS</u>)</div>
-										<div class="company">UIC, Chicago, Illinois</div>
-										<p>
-											Scraped data from websites, wrote node js server code to intermediate information flow and integrated it with IBM Watson Conversation. <br>
-											Designed dialogue for IBM Watson conversation service, used Tone Analyzer for understanding emotions and Discovery service for obtaining information. Fixed problems with incorrect data being sent.
-										</p>
-									</div>
-
-									<div class="resume-item border-line-h">
-										<div class="date">Aug - Nov 2017</div>
-										<div class="name">Various Android Studio Projects<br> (<u>Android Studio - Java</u>)</div>
-										<div class="company">UIC, Chicago, Illinois</div>
-										<p>
-											Simulating a 4 digit number guessing game using two players (Java threads, adapters and handlers). <br>
-											Parsed and display data (in JSON format) from a website according to the user input (AIDL and Services)
-										</p>
-									</div>
-
-									<div class="resume-item border-line-h">
-										<div class="date">Aug - Nov 2017</div>
-										<div class="name">Cyber Escape <br> (<u>Unity game engine- C# and Blender</u>)</div>
-										<div class="company">UIC, Chicago, Illinois</div>
-										<p>
-											Developed a 3D PC game in Electronic Visualization Laboratory in UIC under Professor G.Elisabeta Marai: Designed character models, structured the game using formal elements, implemented AI, physics, sounds and shaders. Prototyped and tested the game. Worked with a multi-disciplinary team and served as project manager.
-										</p>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 
@@ -612,9 +564,21 @@
 									</div>
 									<ul>
 										<li class="border-line-h"> 
-											<div class="name">C++ / C#</div>
+											<div class="name">Python</div>
 											<div class="progress">
 												<div class="percentage" style="width:85%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h"> 
+											<div class="name">Rust</div>
+											<div class="progress">
+												<div class="percentage" style="width:60%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h"> 
+											<div class="name">C++ / C#</div>
+											<div class="progress">
+												<div class="percentage" style="width:70%;"></div>
 											</div>
 										</li>
 										<li class="border-line-h"> 
@@ -624,7 +588,7 @@
 											</div>
 										</li>
 										<li class="border-line-h"> 
-											<div class="name">JavaScript</div>
+											<div class="name">JavaScript / TypeScript</div>
 											<div class="progress">
 												<div class="percentage" style="width:75%;"></div>
 											</div>
@@ -632,7 +596,7 @@
 										<li>
 											<div class="name">HTML / CSS</div>
 											<div class="progress">
-												<div class="percentage" style="width:90%;"></div>
+												<div class="percentage" style="width:50%;"></div>
 											</div>
 										</li>
 									</ul>
@@ -648,6 +612,186 @@
 			</div>
 
 			<!--
+				Card - Education
+			-->
+			<div class="card-inner" id="education-card">
+				<div class="card-wrap">
+
+					<!--
+						Resume
+					-->
+					<div class="content resume">
+						<!-- content -->
+						<div class="row">
+							<!-- education -->
+							<div class="col border-line-v">
+								<div class="resume-title border-line-h">
+									<div class="icon"><i class="ion ion-university"></i></div>
+									<div class="name">Education</div>
+								</div>
+								<div class="resume-items">
+									<div class="resume-item border-line-h active">
+										<div class="date">2017 - 2019</div>
+										<div class="name">University of Illinois at Chicago</div>
+										<div class="company">Chicago, Illinois</div>
+										<p>
+											Master of Science in Computer Science<br>
+											Coursework - Video Game design and development, Mobile App Development, and Algorithm Design and Analysis, Data Mining and Text Mining, Artificial Intelligence, Data visualization, and Augmented Reality/Virtual Reality.
+										</p>
+									</div>
+									<div class="resume-item">
+										<div class="date">2013 - 2017</div>
+										<div class="name">College of Engineering, Guindy, Anna University</div>
+										<div class="company">Chennai, India</div>
+										<p>
+											Bachelor of Engineering in Computer Science
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--
+				Card - Projects
+			-->
+			<div class="card-inner" id="projects-card">
+				<div class="card-wrap">
+
+					<!--
+						Personal Projects
+					-->
+					<div class="content resume">
+						<div class="row">
+							<!-- projects -->
+							<div class="col border-line-v">
+								<div class="resume-title border-line-h">
+									<div class="icon"><i class="ion ion-document"></i></div>
+									<div class="name">Personal Projects</div>
+								</div>
+								<div class="resume-items">
+									<div class="resume-item border-line-h">
+										<div class="date">Jan 2024 - Present</div>
+										<div class="name">AI-Powered E-Commerce Application <br>(<u>Python, React, PostgreSQL, OpenAI, Autogen, MCP, RAG</u>)</div>
+										<div class="company">Founding Engineer</div>
+										<p>
+											Designed, built, and deployed a cost-efficient, scalable GenAI multi-agent chatbot leveraging Autogen, OpenAI APIs, dynamic prompts, hybrid semantic search, and robust CI/CD workflows.
+										</p>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+
+					<!--
+						University Projects
+					-->
+					<div class="content resume">
+						<div class="row">
+							<!-- projects -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="resume-title border-line-h">
+									<div class="icon"><i class="ion ion-document"></i></div>
+									<div class="name">University Projects</div>
+								</div>
+								<div class="resume-items">
+									<div class="resume-item border-line-h">
+										<div class="date">Jan 2019 - Jul 2019</div>
+										<div class="name">Ankle Rehablitation Game for Stroke Patients<br> (<u>Unity, Arduino and C#</u>)</div>
+										<div class="company">UI Health, UIC, Chicago, Illinois</div>
+										<p>
+											Developed a game in which the character will be controlled by the ankle movement of the patient.<br>
+											Coded and developed different games to keep the patients foot in motion and slowly increace their brain activity and range of foot motion.
+										</p>
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">Dec 2018</div>
+										<div class="name">Developed Augmented Reality Android application<br> (<u>Unity, ARCore and C#</u>)</div>
+										<div class="company">EVL, UIC, Chicago, Illinois</div>
+										<p>
+											Made a physics game using Unity engine physics and physics concepts such as mementum, torque and gravity.<br>
+											Coded for ground plane detection and a veriety of events upon colliding with triggers.
+										</p>
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">Oct 2018</div>
+										<div class="name">Developed Virtual Reality application<br> (<u>Unity, VRTK and C#</u>)</div>
+										<div class="company">EVL, UIC, Chicago, Illinois</div>
+										<p>
+											Made a horror game that can be played in HTC Vive.<br>
+											Coded for a variety of events as the player moves in the 3 x 3 meter space in the room, such as walking, crawling, climbing and various object interactions.
+										</p>
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">Sep 2018</div>
+										<div class="name">Developed Augmented Reality android application <br> (<u>Unity, Vuforia and C#</u>)</div>
+										<div class="company">EVL, UIC, Chicago, Illinois</div>
+										<p>
+											Made an application to encourage users to eat healthy using augmented reality.<br>
+											Added models on detecting objects using Computer Vision in Vuforia. Coded proximity of objects to have outcomes.
+										</p>
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">Oct 2018</div>
+										<div class="name">Developed Virtual Reality Halloween game <br>(<u>Unity, VRTK and C#</u>)</div>
+										<div class="company">EVL, UIC, Chicago, Illinois</div>
+										<p>
+											Incorporated various jump scares to give users a surreal experience while playing the interactive horror game in Virtual Reality.
+										</p>
+									</div>
+								</div>
+							</div>	
+
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="resume-items">
+									<div class="resume-item border-line-h">
+										<div class="date">May - Aug 2018</div>
+										<div class="name">Data Science	 for Geopolitical Estimation of Cancer Rates <br>(<u>QGIS, Javascript, HTML, CSS</u>)</div>
+										<div class="company">EVL, UIC, Chicago, Illinois</div>
+										<p>
+											Developed a geographic information system-based method for estimating cancer rates in non-census defined geographical areas.<br>Preprocessed the data and mapped the data to wards to visualize a data driven story.  
+										</p>
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">Feb - May 2018</div>
+										<div class="name">UIC Admission Chatbot NLP <br> (<u>IBM Watson and Node JS</u>)</div>
+										<div class="company">UIC, Chicago, Illinois</div>
+										<p>
+											Scraped data from websites, wrote node js server code to intermediate information flow and integrated it with IBM Watson Conversation. <br>
+											Designed dialogue for IBM Watson conversation service, used Tone Analyzer for understanding emotions and Discovery service for obtaining information. Fixed problems with incorrect data being sent.
+										</p>
+									</div>
+
+									<div class="resume-item border-line-h">
+										<div class="date">Aug - Nov 2017</div>
+										<div class="name">Various Android Studio Projects<br> (<u>Android Studio - Java</u>)</div>
+										<div class="company">UIC, Chicago, Illinois</div>
+										<p>
+											Simulating a 4 digit number guessing game using two players (Java threads, adapters and handlers). <br>
+											Parsed and display data (in JSON format) from a website according to the user input (AIDL and Services)
+										</p>
+									</div>
+
+									<div class="resume-item border-line-h">
+										<div class="date">Aug - Nov 2017</div>
+										<div class="name">Cyber Escape <br> (<u>Unity game engine- C# and Blender</u>)</div>
+										<div class="company">UIC, Chicago, Illinois</div>
+										<p>
+											Developed a 3D PC game in Electronic Visualization Laboratory in UIC under Professor G.Elisabeta Marai: Designed character models, structured the game using formal elements, implemented AI, physics, sounds and shaders. Prototyped and tested the game. Worked with a multi-disciplinary team and served as project manager.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--
 				Card - Works
 			-->
 			<div class="card-inner" id="works-card">
@@ -659,7 +803,7 @@
 					<div class="content works">
 
 						<!-- title -->
-						<div class="title">Recent Projects</div>
+						<div class="title">Projects</div>
 
 						<!-- filters -->
 						<div class="filter-menu filter-button-group">
@@ -1005,7 +1149,7 @@
 					<div class="content blog">
 
 						<!-- title -->
-						<div class="title">Course Websites</div>
+						<div class="title">UIC Course Websites</div>
 
 						<!-- content -->
 						<div class="row border-line-v">
@@ -1095,7 +1239,7 @@
 								<div class="map" id="map"></div>
 								<div class="info-list">
 									<ul>
-										<li><strong>Address . . . . .</strong> Chicago, Illinois, USA</li>
+										<li><strong>Address . . . . .</strong> Nashua, NH, USA</li>
 										<li><strong>Email . . . . .</strong> ramnarayanan15144@gmail.com</li>
 										<li><strong>Phone . . . . .</strong> +1 832 830 3710</li>
 										<!-- <li><strong>Freelance . . . . .</strong> Available</li> -->

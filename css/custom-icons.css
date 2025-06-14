@@ -1,0 +1,58 @@
+/* Custom Icons CSS */
+
+/* AI Brain Data Icon from SVG Repo - Using actual file */
+.ion-ai-brain:before {
+    content: "";
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    background-image: url('../images/custom_icons/artificial-intelligence-ai-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    /* Inherit the same styling as regular Ionicons */
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Apply orange color filter to match theme */
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(360deg) brightness(118%) contrast(119%);
+    /* Adjust positioning to move icon up */
+    position: relative;
+    top: -0.05em;
+}
+
+.ion-database-web-app-code:before {
+    content: "";
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    background-image: url('../images/custom_icons/database-web-app-code-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    /* Inherit the same styling as regular Ionicons */
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Apply orange color filter to match theme */
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(360deg) brightness(118%) contrast(119%);
+    /* Adjust positioning to move icon up */
+    position: relative;
+    top: -0.05em;
+}
